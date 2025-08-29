@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Classmates WhatsApp Group</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f9fa;
+      color: #333;
+    }
+
+    header {
+      background: #25D366;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: clamp(1.5rem, 4vw, 2rem);
+    }
+
+    nav {
+      background: #1da851;
+      padding: .5rem;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+      font-size: clamp(0.9rem, 2vw, 1rem);
+    }
+
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    .about {
+      background: white;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, .05);
+    }
+
+    .about p {
+      font-size: clamp(0.9rem, 2.5vw, 1rem);
+      line-height: 1.6;
+    }
+
+    .classmates {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .mate {
+      background: white;
+      border-radius: 12px;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, .05);
+      transition: transform .2s;
+    }
+
+    .mate:hover {
+      transform: translateY(-5px);
+    }
+
+    .mate img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: .5rem;
+    }
+
+    .mate h3 {
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      margin-bottom: .3rem;
+    }
+
+    .mate p {
+      font-size: clamp(0.8rem, 2.2vw, 0.95rem);
+      color: #555;
+    }
+
+    .whatsapp-btn {
+      display: inline-block;
+      margin-top: .8rem;
+      background: #25D366;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: clamp(0.85rem, 2vw, 1rem);
+      font-weight: bold;
+      transition: background .3s;
+    }
+
+    .whatsapp-btn:hover {
+      background: #1da851;
+    }
+
+    .join-btn {
+      display: block;
+      margin: 2rem auto 0;
+      background: #25D366;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: clamp(1rem, 2.5vw, 1.1rem);
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, .15);
+      transition: background .3s;
+      text-align: center;
+      width: fit-content;
+    }
+
+    .join-btn:hover {
+      background: #1da851;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: clamp(0.8rem, 2vw, 0.9rem);
+      color: #555;
+      background: #f1f1f1;
+      margin-top: 2rem;
+    }
+
+    /* Action Buttons */
+    .action-btn {
+      display: block;
+      margin: 1rem auto;
+      background: #ff4d4d;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, .15);
+      transition: background .3s;
+      text-align: center;
+      width: fit-content;
+      cursor: pointer;
+      border: none;
+    }
+
+    .action-btn.logout {
+      background: #555;
+    }
+
+    .action-btn:hover {
+      opacity: 0.9;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: .5rem;
+      }
+
+      .mate img {
+        width: 80px;
+        height: 80px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Our Classmates WhatsApp Group</h1>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#classmates">Classmates</a>
+    <a href="#join">Join Group</a>
+    <a href="#memories">Memories</a>
+  </nav>
+
+  <section id="about" class="about">
+    <h2>About Our Group</h2>
+    <p>Welcome to our WhatsApp group! 🎉 This is where classmates stay connected, share updates, study tips, and fun
+      moments together. Everyone is welcome to join and be part of the community!</p>
+  </section>
+
+  <section class="admins">
+    <div class="admins">
+      <div class="mate admin-song">
+        <img src="https://media-los2-1.cdn.whatsapp.net/v/t61.24694-24/533021706_1443625133352719_5491833837094676628_n.jpg?ccb=11-4&oh=01_Q5Aa2QGg4Sop6AYT7KkF2dZRZxvi_RSUd4uX3JDRAYPL6VcznA&oe=68BE7757&_nc_sid=5e03e0&_nc_cat=106" alt="Admin 1">
+        <h3>ERΣΠ︵²ᵏ⁷</h3>
+        <p>Website and software developer bot programmer too</p>
+        <a href="https://wa.me/2348143929492" class="whatsapp-btn">Chat</a>
+      </div>
+    
+      <div class="mate admin-song">
+        <img src="https://media-los2-1.cdn.whatsapp.net/v/t61.24694-24/537626715_1325994282449292_1880071917715674552_n.jpg?ccb=11-4&oh=01_Q5Aa2QE_2DFjeiDyUYhrnnnPH8jh2BNwH4vzygT_SUHFu5Turg&oe=68BE76E4&_nc_sid=5e03e0&_nc_cat=106" alt="Admin 2">
+        <h3>ERΣΠ︵Ai</h3>
+        <p>Am here for your assistance and support</p>
+        <a href="https://wa.me/2349069125222" class="whatsapp-btn">Chat</a>
+      </div>
+    </div>
+    
+    <!-- 🎵 Hidden Audio -->
+<div>
+  <audio id="adminSong" preload="auto">
+    <source src="Snapchat-878111405.mp3" type="audio/mpeg">
+  </audio>
+</div>
+
+  </section>
+  
+<style>
+  /* 🌈 Rainbow border effect (special admin card) */
+  .admin-song {
+    position: relative;
+    padding: 15px;
+    border-radius: 20px;
+    overflow: hidden;
+    z-index: 1;
+    animation: rainbowGlow 4s ease-in-out infinite alternate;
+  }
+  .admins {
+  display: flex;
+  justify-content: center;
+  gap: 30px;   /* space between them */
+  margin-top: 20px;
+  flex-wrap: nowrap; /* 🔥 keep them side-by-side always */
+}
+
+  .admin-song::before {
+    content: "";
+    position: absolute;
+    inset: -3px; /* shorthand for top/left/right/bottom */
+    border-radius: 22px;
+    background: linear-gradient(270deg,
+      red, orange, yellow, green, cyan, blue, violet, red);
+    background-size: 400% 400%;
+    animation: rainbowMove 6s linear infinite;
+    z-index: -1;
+  }
+  
+  .admin-song::after {
+    content: "";
+    position: absolute;
+    inset: 2px;
+    border-radius: 18px;
+    background: #fff; /* keep inside clean */
+    z-index: -1;
+  }
+  
+  /* 🌈 Moving rainbow animation */
+  @keyframes rainbowMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* ✨ Extra glowing aura */
+  @keyframes rainbowGlow {
+    from { box-shadow: 0 0 15px rgba(255,0,255,0.4); }
+    to   { box-shadow: 0 0 35px rgba(0,255,255,0.7); }
+  }
+  </style>  
+  
+  <script>
+    // Animation: reveal cards one by one
+    document.addEventListener("DOMContentLoaded", () => {
+      const cards = document.querySelectorAll(".mate");
+      cards.forEach((card, index) => {
+        setTimeout(() => {
+          card.classList.add("show");
+        }, index * 300); // staggered effect
+      });
+    });
+  </script>
+    
+  
+  <section id="classmates" class="classmates">
+             <!-- Classmate 19 -->
+             <div class="mate">
+              <img src="https://media-los2-1.cdn.whatsapp.net/v/t61.24694-24/485452805_1192441492385073_8808842344091418395_n.jpg?ccb=11-4&oh=01_Q5Aa2QFt7nnKVmNXdTJIcF-9wzUx1A2puQk167CNggJ2Tm2r8w&oe=68BE6630&_nc_sid=5e03e0&_nc_cat=101" alt="Emeka">
+              <h3>~💃🏾 ADVOCATE 💃🏾</h3>
+              <p>Hey there! I am using WhatsApp.</p>
+              <a href="https://wa.me/2349138239024" target="_blank" class="whatsapp-btn">Chat</a>
+             </div>
+    <div class="mate">
+      <img src="https://media-los2-1.cdn.whatsapp.net/v/t61.24694-24/537622131_1054469586550635_4340467645793897049_n.jpg?ccb=11-4&oh=01_Q5Aa2QEDRMTTRzsTuXb1ZbEnwhQAo1-8qlYyllHabPNH9Iw97A&oe=68BD6587&_nc_sid=5e03e0&_nc_cat=111" alt="John Doe">
+      <h3>ALBERT</h3>
+      <p>Focus on perfection...🦦</p>
+      <a href="https://wa.me/2348131804677" target="_blank" class="whatsapp-btn">Chat</a>
+    </div>
+    <div class="mate">
+      <img src="https://media-los2-1.cdn.whatsapp.net/v/t61.24694-24/461090537_550083674175175_2431788012212798115_n.jpg?ccb=11-4&oh=01_Q5Aa2QFEsi3xjOc90rDq284RryBXQx5LRBFS-9YMQfmJVyPY_g&oe=68BD4550&_nc_sid=5e03e0&_nc_cat=107" alt="Jane Smith">
+      <h3>Ayo😎</h3>
+      <p>Available</p>
+      <a href="https://wa.me/2348104107314" target="_blank" class="whatsapp-btn">Chat</a>
+    </div>
+    <div class="mate">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZzFnccjnigm9S3jWHSPST2jcrh8NCZUfscA&s" alt="Alex Brown">
+      <h3>Ugwoke Victor</h3>
+      <p>Hey there! I am using WhatsApp.</p>
+      <a href="https://wa.me/2347071473142" target="_blank" class="whatsapp-btn">Chat</a>
+    </div>
+    <div class="mate">
+        <img src="https://media-los2-1.cdn.whatsapp.net/v/t61.24694-24/529946795_1216110250190492_4088522662270269448_n.jpg?ccb=11-4&oh=01_Q5Aa2QFIXv0xEX0wEPe-AafsPH7bN828Gbyo0ptJQOybFEHRuQ&oe=68BD5F57&_nc_sid=5e03e0&_nc_cat=111" alt="Alex Brown">
+        <h3>CHIBUGO</h3>
+        <p>Up and Grateful</p>
+        <a href="https://wa.me/2347034965593" target="_blank" class="whatsapp-btn">Chat</a>
+      </div>
+      <div class="mate">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZzFnccjnigm9S3jWHSPST2jcrh8NCZUfscA&s" alt="Chinemerem">
+        <h3>Chinemerem</h3>
+        <p>Hey there! I am using WhatsApp.</p>
+        <a href="https://wa.me/2348169836736" target="_blank" class="whatsapp-btn">Chat</a>
+      </div>
+  
+      <!-- Classmate 2 -->
+      <div class="mate">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZzFnccjnigm9S3jWHSPST2jcrh8NCZUfscA&s" alt="Daniel">
+        <h3>Daniel</h3>
+        <p>GOD FIRST 🙏</p>
+        <a href="https://wa.me/2347018501582" target="_blank" class="whatsapp-btn">Chat</a>
+      </div>
+  
+      <!-- Classmate 3 -->
+      <div class="mate">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZzFnccjnigm9S3jWHSPST2jcrh8NCZUfscA&s" alt="David OKP">
+        <h3>David OKP</h3>
+        <p>RULE ABOVE ALL</p>
+        <a href="https://wa.me/2348163823045" target="_blank" class="whatsapp-btn">Chat</a>
+      </div>
+  
+      <!-- Classmate 4 -->
+      <div class="mate">
+        <img src="https://media-los2-1.cdn.whatsapp.net/v/t61.24694-24/532160581_1265497775263201_5645072026178612579_n.jpg?ccb=11-4&oh=01_Q5Aa2QGyUyI_Jcj-cBihe5AG_6sqRH6w_9hWIj8pwHu-dAjuyw&oe=68BD7A0A&_nc_sid=5e03e0&_nc_cat=105" alt="Emeka">
+        <h3>EMEKA</h3>
+        <p>Wake up to reality man! Humans will always be humans 🤌🦅</p>
+        <a href="https://wa.me/2347075653464" target="_blank" class="whatsapp-btn">Chat</a>
+      </div>
+            <!-- Classmate 5 -->
+            <div class="mate">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZzFnccjnigm9S3jWHSPST2jcrh8NCZUfscA&s" alt="Emeka">
+                <h3>Ezelibe 😂😏</h3>
+                <p>Hey there! I am using WhatsApp.</p>
+                <a href="https://wa.me/2349040348789" target="_blank" class="whatsapp-btn">Chat</a>
+              </div>
+         <!-- Classmate 6 -->
+         <div class="mate">
+            <img src="https://media-los2-1.cdn.whatsapp.net/v/t61.24694-24/491837212_3361242667348269_5897704706121728136_n.jpg?ccb=11-4&oh=01_Q5Aa2QEU-GZRt1CO-M13Ix5NUx0vrXsJcdhBJYc_hZEvkthKoQ&oe=68BD61CE&_nc_sid=5e03e0&_nc_cat=101" alt="Emeka">
+            <h3>Hilary</h3>
+            <p>Hey there! I am using WhatsApp.</p>
+            <a href="https://wa.me/2349035601353" target="_blank" class="whatsapp-btn">Chat</a>
+          </div>
+         <!-- Classmate 7 -->
+         <div class="mate">
+            <img src="https://media-los2-1.cdn.whatsapp.net/v/t61.24694-24/507470132_1444207176717685_709580888422002808_n.jpg?ccb=11-4&oh=01_Q5Aa2QHWcCG32-T6y51tL2Tuc7SOCx9plJxeg01HXVEvoi0i0Q&oe=68BD6C30&_nc_sid=5e03e0&_nc_cat=106" alt="Emeka">
+            <h3>Ifa</h3>
+            <p>Unavailable from 8am-6pm🥲</p>
+            <a href="https://wa.me/2348143249260" target="_blank" class="whatsapp-btn">Chat</a>
+          </div>
+         <!-- Classmate 7 -->
+         <div class="mate">
+            <img src="https://media-los2-1.cdn.whatsapp.net/v/t61.24694-24/524707341_751745004224073_7295707510919113104_n.jpg?ccb=11-4&oh=01_Q5Aa2QGW06PBns0BgKXfWvnBZcYuJNlppk5ifoVZYq9-PFyonw&oe=68BD4D08&_nc_sid=5e03e0&_nc_cat=101" alt="Emeka">
+            <h3>........ Kingsley</h3>
+            <p>My God My Glory</p>
+            <a href="https://wa.me/2347079861282" target="_blank" class="whatsapp-btn">Chat</a>
+         </div>
+
+         <!-- Classmate 8 -->
+         <div class="mate">
+            <img src="https://media-los2-1.cdn.whatsapp.net/v/t61.24694-24/482962752_929058075971145_8774489238418947239_n.jpg?ccb=11-4&oh=01_Q5Aa2QHbP8Um7RB_Qpc2_3uTDgakCa8YG-UvFVB8YVh0JXnhug&oe=68BD75B6&_nc_sid=5e03e0&_nc_cat=101" alt="Emeka">
+            <h3>Kamji</h3>
+            <p>Available</p>
+            <a href="https://wa.me/2348137893143" target="_blank" class="whatsapp-btn">Chat</a>
+          </div>
+
+         <!-- Classmate 9 -->
+         <div class="mate">
+            <img src="https://media-los2-1.cdn.whatsapp.net/v/t61.24694-24/516943082_1084400050326248_6303722849265496173_n.jpg?ccb=11-4&oh=01_Q5Aa2QGPXT343AjmxrasSP3nZBMYTDVMJXsCS1e7SMIBbahprg&oe=68BD5F57&_nc_sid=5e03e0&_nc_cat=106" alt="Emeka">
+            <h3>Lazy bones laboratory</h3>
+            <p>Ready and available 😝💯</p>
+            <a href="https://wa.me/2348123830024" target="_blank" class="whatsapp-btn">Chat</a>
+          </div>
+
+         <!-- Classmate 10 -->
+         <div class="mate">
+            <img src="https://media-los2-1.cdn.whatsapp.net/v/t61.24694-24/514312400_1441622150391369_2444491940718746985_n.jpg?ccb=11-4&oh=01_Q5Aa2QEOucF3dJYwNNR7AN60h61TdYWJezWbxcfDb2y73DBHVw&oe=68BE891B&_nc_sid=5e03e0&_nc_cat=107" alt="Emeka">
+            <h3>~🎭☯️</h3>
+            <p>Money minded 😮‍💨😮‍💨</p>
+            <a href="https://wa.me/2347065807532" target="_blank" class="whatsapp-btn">Chat</a>
+          </div>
+         <!-- Classmate 11 -->
+         <div class="mate">
+          <img src="https://media-los2-1.cdn.whatsapp.net/v/t61.24694-24/518889338_792331269882574_3653390550345154851_n.jpg?ccb=11-4&oh=01_Q5Aa2QEQxyJVw5OmPpxKU1epffGK2xSvOL5urizVmS_iWNgVKw&oe=68BE892F&_nc_sid=5e03e0&_nc_cat=110" alt="Emeka">
+          <h3>Obi</h3>
+          <p>Hey there! I am using WhatsApp.</p>
+          <a href="https://wa.me/2348063475199" target="_blank" class="whatsapp-btn">Chat</a>
+        </div>
+         <!-- Classmate 11 -->
+         <div class="mate">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZzFnccjnigm9S3jWHSPST2jcrh8NCZUfscA&s" alt="Emeka">
+          <h3>Offor</h3>
+          <p>Hey there! I am using WhatsApp.</p>
+          <a href="https://wa.me/2349129552791" target="_blank" class="whatsapp-btn">Chat</a>
+        </div>
+         <!-- Classmate 12 -->
+         <div class="mate">
+          <img src="https://media-los2-1.cdn.whatsapp.net/v/t61.24694-24/328780139_987594453377903_7144759799127002097_n.jpg?ccb=11-4&oh=01_Q5Aa2QE1Vj9MEHFj_k0AGbopJoOPLmo4qzjAmC2jG7GPfbZd-w&oe=68BE637B&_nc_sid=5e03e0&_nc_cat=105" alt="Emeka">
+          <h3>Omasere</h3>
+          <p>Hey there! I am using WhatsApp Business.</p>
+          <a href="https://wa.me/2349017471568" target="_blank" class="whatsapp-btn">Chat</a>
+        </div>
+         <!-- Classmate 13 -->
+         <div class="mate">
+          <img src="https://media-los2-1.cdn.whatsapp.net/v/t61.24694-24/518690300_2194410720971528_2788122453354476396_n.jpg?ccb=11-4&oh=01_Q5Aa2QEpshw2a48I5UENENN6_LUy2DuKdnuhG1DXncwbjDCY6A&oe=68BE84C4&_nc_sid=5e03e0&_nc_cat=103" alt="Emeka">
+          <h3>Prosper</h3>
+          <p>♰🅶🅾🅳 🅵🅸🆁🆂🆃 ♰</p>
+          <a href="https://wa.me/2347068056437" target="_blank" class="whatsapp-btn">Chat</a>
+        </div>
+         <!-- Classmate 14 -->
+         <div class="mate">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZzFnccjnigm9S3jWHSPST2jcrh8NCZUfscA&s" alt="Emeka">
+          <h3>Raymond Grayson 😎♉</h3>
+          <p>Hey there! I am using WhatsApp.</p>
+          <a href="https://wa.me/2349166732585" target="_blank" class="whatsapp-btn">Chat</a>
+         </div>
+         <!-- Classmate 15 -->
+         <div class="mate">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZzFnccjnigm9S3jWHSPST2jcrh8NCZUfscA&s" alt="Emeka">
+          <h3>samix🤬💀</h3>
+          <p>Hey there! I am using WhatsApp.</p>
+          <a href="https://wa.me/2348131340382" target="_blank" class="whatsapp-btn">Chat</a>
+         </div>         
+         <!-- Classmate 16 -->
+         <div class="mate">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZzFnccjnigm9S3jWHSPST2jcrh8NCZUfscA&s" alt="Emeka">
+          <h3>SAULTED[PRINCE]🤑🤑</h3>
+          <p>SAULTED ENTERPRISE🤑😈</p>
+          <a href="https://wa.me/2349162878629" target="_blank" class="whatsapp-btn">Chat</a>
+         </div>
+         <!-- Classmate 17 -->
+         <div class="mate">
+          <img src="https://media-los2-1.cdn.whatsapp.net/v/t61.24694-24/538380120_1206274371535897_5360699569263835251_n.jpg?ccb=11-4&oh=01_Q5Aa2QGlnYddwnRValFuIvKBccY8EjoUS149E2ogvFJnxuLblg&oe=68BE83D0&_nc_sid=5e03e0&_nc_cat=101" alt="Emeka">
+          <h3>Uchejah Pb😎</h3>
+          <p>🜏𝖘𝖍𝖆𝖉ø𝖜🜏𝖋𝖚𝖓𝖉𝖘</p>
+          <a href="https://wa.me/2347046052704" target="_blank" class="whatsapp-btn">Chat</a>
+         </div>
+         <!-- Classmate 18 -->
+         <div class="mate">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZzFnccjnigm9S3jWHSPST2jcrh8NCZUfscA&s" alt="Emeka">
+          <h3>Victory</h3>
+          <p>Typing...</p>
+          <a href="https://wa.me/2347047309579" target="_blank" class="whatsapp-btn">Chat</a>
+         </div>
+  </section>
+
+<section id="memories" class="classmates">
+    <div>
+    <h1>hi</h1>
+    </div>
+</section>
+
+
+
+  <a id="join" href="https://chat.whatsapp.com/L7lgpjLHD2JK3HDpuMC32R" target="_blank" class="join-btn">Join WhatsApp Group</a>
+
+  <!-- 🔹 Logout & Delete Account Buttons -->
+  <button class="action-btn logout" onclick="logout()">Log Out</button>
+  <button class="action-btn" onclick="deleteAccount()">Delete Account</button>
+
+  <footer>
+    &copy; 2025 Our Classmates Group. All rights reserved.
+  </footer>
+
+  <script>
+    function logout() {
+      alert("You have been logged out!");
+      // Example: redirect to home page
+      window.location.href = "log in.html";
+    }
+
+    function deleteAccount() {
+      let confirmDelete = confirm("Are you sure you want to delete your account? This action cannot be undone!");
+      if (confirmDelete) {
+        alert("Your account has been deleted.");
+        // Example: redirect or perform API call
+        window.location.href = "log in.html";
+      }
+    }
+  </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const adminCard = document.querySelector(".admin-song");
+    const song = document.getElementById("adminSong");
+  
+    // Volume setup
+    song.volume = 0;
+  
+    // 🔓 Unlock audio after first user interaction
+    function unlockAudio() {
+      song.play().then(() => {
+        song.pause();
+        song.currentTime = 0;
+      }).catch(()=>{});
+      document.removeEventListener("click", unlockAudio);
+      document.removeEventListener("touchstart", unlockAudio);
+    }
+    document.addEventListener("click", unlockAudio);
+    document.addEventListener("touchstart", unlockAudio);
+  
+    let fadeIn, fadeOut;
+  
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          song.play().catch(()=>{});
+          clearInterval(fadeOut);
+          fadeIn = setInterval(() => {
+            if (song.volume < 1) song.volume = Math.min(song.volume + 0.05, 1);
+          }, 150);
+        } else {
+          clearInterval(fadeIn);
+          fadeOut = setInterval(() => {
+            if (song.volume > 0) {
+              song.volume = Math.max(song.volume - 0.05, 0);
+            } else {
+              song.pause();
+              clearInterval(fadeOut);
+            }
+          }, 150);
+        }
+      });
+    }, { threshold: 0.6 });
+  
+    observer.observe(adminCard);
+  });
+  </script>
+  
+  
+</body>
+
+</html>
